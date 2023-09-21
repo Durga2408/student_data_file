@@ -1,0 +1,26 @@
+def studentdata():
+    studentName=input("student name: ")
+    studentid=input("student id: ")
+    studentgrade=input("student grade: ")
+    studentmarks=input("student marks: ")
+    studentclass=input("student class: ")
+
+    student=f"{studentName},{studentid},{studentgrade},{studentmarks},{studentclass}\n"
+
+    store=open("d:\\Kamal\\task.txt","+a")
+    store.write(student)
+
+def main():
+    while True:
+        print("\nMenu:")
+        print("1.Add Student Data")
+        print("2.Quit")
+
+        choice=input("Enter your choice: ")
+        if choice == "1":
+            studentdata()
+        elif choice == "2":
+            break
+        else:
+            print("Invalid choice.Please try again.")
+main()                
